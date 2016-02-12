@@ -26,20 +26,23 @@
       return vector.x === x && vector.y === y;
     });
   };
+
   jestEngine.Space.prototype.getVectorsList = function(){
     return Object.keys(this.vectors).map((vectorName) => {
       return this.vectors[vectorName];
     });
   };
+
   jestEngine.Space.prototype.rotate = function (theta, axis, point) {
+    // manually calculate rotation of a space with theta degree through an axis that passes through a point
     let newSpace = new jestEngine.Space();
     let u = axis.x;
     let v = axis.y;
     let w = axis.z;
     point = point || new jestEngine.Vector([0,0,0]);
-    let a = axis.x;
-    let b = axis.y;
-    let c = axis.z;
+    let a = point.x;
+    let b = point.y;
+    let c = point.z;
 
     this.getVectorsList().forEach((vector) => {
       let x = vector.x;

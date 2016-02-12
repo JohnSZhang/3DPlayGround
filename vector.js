@@ -20,11 +20,12 @@
     return this.x + ',' + this.y + ',' + this.z;
   };
 })();
-var vectorA = new jestEngine.Vector([-10, -10, -10]);
-var vectorB = new jestEngine.Vector([10, 10, 10]);
-var vectorC = new jestEngine.Vector([-10, 10, 10]);
-var vectorD = new jestEngine.Vector([-10, 10, -10]);
-var vectorE = new jestEngine.Vector([-10, -10, 10]);
-var vectorF = new jestEngine.Vector([10, -10, 10]);
-var vectorG = new jestEngine.Vector([10, 10, -10]);
-var vectorH = new jestEngine.Vector([10, -10, -10]);
+// create 8 points of a cube
+var vectorA = new jestEngine.Vector([-15, -15, -15]);
+var vectorB = new jestEngine.Vector([15, 15, 15]);
+var vectorC = new jestEngine.Vector([-15, 15, 15]);
+var vectorD = new jestEngine.Vector([-15, 15, -15]);
+var vectorE = new jestEngine.Vector([-15, -15, 15]);
+var vectorF = new jestEngine.Vector([15, -15, 15]);
+var vectorG = new jestEngine.Vector([15, 15, -15]);
+var vectorH = new jestEngine.Vector([15, -15, -15]);

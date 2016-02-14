@@ -1,8 +1,8 @@
+'use strict';
 (function(argument){
   window.jestEngine = window.jestEngine || {};
   // A vector is a point with x y z values
   jestEngine.Vector = function(options){
-    var _this = this;
     // if array we map to x y z, else we create object
     if(options.length) {
       this.x = options[0];
@@ -18,6 +18,13 @@
 
   jestEngine.Vector.prototype.toKey = function(){
     return this.x + ',' + this.y + ',' + this.z;
+  };
+
+  jestEngine.Vector.prototype.distanceTo = function(dest) {
+    const dx2 = Math.pow((this.x - dest.x), 2);
+    const dy2 = Math.pow((this.y - dest.y), 2);
+    const dz2 = Math.pow((this.z - dest.z), 2);
+    return Math.sqrt(dx2 + dy2 + dz2);
   };
 })();
 // create 8 points of a cube

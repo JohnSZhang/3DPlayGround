@@ -21,7 +21,7 @@ function drawFrame(canvasContext, width, height) {
   currentFrameCount+=1;
   const newImage = jestEngine.render(spaceA, width, height, C_DEFAULTBACKGROUND);
   canvasContext.putImageData(newImage, 0, 0);
-  spaceA = spaceA.rotate(0.05, new jestEngine.Vector([1, 1, 0]), new jestEngine.Vector([0, 0, 0]))
+  spaceA = spaceA.rotate(0.05, new jestEngine.Vector([1, 1, .75]), new jestEngine.Vector([50, 50, 10]))
   if (!MAX_FRAMECOUNT || currentFrameCount <= MAX_FRAMECOUNT) {
     window.requestAnimationFrame(drawFrame.bind(window, canvasContext, width, height));
   }

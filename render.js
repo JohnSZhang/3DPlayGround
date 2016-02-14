@@ -1,6 +1,6 @@
 'use strict';
 (function(argument){
-  const C_VECTORCOLOR = [150, 170, 220, 255];
+  const C_VECTORCOLOR = [220, 50, 75, 255];
   window.jestEngine = window.jestEngine || {};
   // takes a space of verticals and renders an image data
   jestEngine.render = function(space, width, height, defaultColor) {

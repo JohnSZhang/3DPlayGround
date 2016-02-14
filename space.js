@@ -18,11 +18,13 @@
     this.vectors[vector.toKey()] = vector;
   };
 
+
+  jestEngine.Space.prototype.addLine = function(line){
+    line.vectors.forEach(this.addVector.bind(this));
+  };
+
   jestEngine.Space.prototype.hasVector = function(x, y){
     return this.getVectorsList().find((vector) => {
-      if (vector.x === x && vector.y === y) {
-        //console.log('found vector');
-      }
       return vector.x === x && vector.y === y;
     });
   };
@@ -69,12 +71,28 @@
 
 })();
 // create a space and add the 8 points of the cube
-var spaceA = new jestEngine.Space();
-spaceA.addVector(vectorA);
-spaceA.addVector(vectorB);
-spaceA.addVector(vectorC);
-spaceA.addVector(vectorD);
-spaceA.addVector(vectorE);
-spaceA.addVector(vectorF);
-spaceA.addVector(vectorG);
-spaceA.addVector(vectorH);
+let spaceA = new jestEngine.Space();
+
+// Add Edges of a cube
+// spaceA.addVector(vectorA);
+// spaceA.addVector(vectorB);
+// spaceA.addVector(vectorC);
+// spaceA.addVector(vectorD);
+// spaceA.addVector(vectorE);
+// spaceA.addVector(vectorF);
+// spaceA.addVector(vectorG);
+// spaceA.addVector(vectorH);
+
+// Add lines of a cube
+spaceA.addLine(lineA);
+spaceA.addLine(lineB);
+spaceA.addLine(lineC);
+spaceA.addLine(lineD);
+spaceA.addLine(lineE);
+spaceA.addLine(lineF);
+spaceA.addLine(lineG);
+spaceA.addLine(lineH);
+spaceA.addLine(lineI);
+spaceA.addLine(lineJ);
+spaceA.addLine(lineK);
+spaceA.addLine(lineL);
